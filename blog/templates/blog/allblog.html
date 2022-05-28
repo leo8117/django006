@@ -29,7 +29,22 @@
 </header>
 
 <main>
-{{ blogs }}
+
+  <div class="container">
+    <h1 class="text-center p-5">Welcome to Leos BLog</h1>
+    <p></p>
+    <hr>
+
+    {% for blog in blogs %}
+    <a href=""></a><h2>{{ blog.title }}</h2>
+    {{ blog.pub_date }}
+    <br>
+    <img class="img-fluid" src="{{ blog.image.url}}" width="400" height="400">
+    <br>
+    <p>{{ blog.summary }}</p>
+    {% endfor %}
+  </div>
+
 
 </main>
 
